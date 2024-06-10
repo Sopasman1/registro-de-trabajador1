@@ -211,7 +211,7 @@ namespace registro_de_trabajador
         private void button5_Click(object sender, EventArgs e)
         {
             SaveFileDialog saveFileDialog1 = new SaveFileDialog();
-            saveFileDialog1.Filter = "Archivo Excel (*.xlsx)|*.xlsx|Archivo PDF (*.pdf)|*.pdf|Documento de World (*.docx)|*.docx|Archivos JSON (*.json)|*.json";
+            saveFileDialog1.Filter = "Archivo Excel (*.xlsx)|*.xlsx|Archivo PDF (*.pdf)|*.pdf|Documento de World (*.docx)|*.docx|Archivos json (*.json)|*.json";
             saveFileDialog1.Title = "Guardar como archivo";
             saveFileDialog1.ShowDialog();
 
@@ -222,13 +222,11 @@ namespace registro_de_trabajador
                 {
                     string fileName = saveFileDialog1.FileName;
 
-                   
-                    // Si el usuario selecciona exportar a un archivo de Excel
                     if (saveFileDialog1.FilterIndex == 1)
                     {
                         ExportarAExcel(fileName);
                     }
-                    // Si el usuario selecciona exportar a un archivo PDF
+                    
                     else if (saveFileDialog1.FilterIndex == 2)
                     {
                         ExportarAPDF(fileName);
@@ -280,16 +278,18 @@ namespace registro_de_trabajador
 
             // Guarda el libro en un archivo
             workbook.SaveAs(fileName);
-
+  
             // Cierra el libro y Excel
             workbook.Close();
             excelApp.Quit();
+            Process.Start(new ProcessStartInfo(fileName) { UseShellExecute=true });
         }
 
        
 
         private void ExportarAPDF(string fileName)
         {
+
             // Crear un nuevo documento PDF
             Document doc = new Document();
 
@@ -327,12 +327,12 @@ namespace registro_de_trabajador
                     }
                 }
             }
-
+           
             // Agregar la tabla al documento
             doc.Add(table);
-
-            // Cerrar el documento
             doc.Close();
+            Process.Start(new ProcessStartInfo(fileName) { UseShellExecute = true });
+      
         }
         private void ExportarAWord(string filename)
         {
@@ -362,6 +362,7 @@ namespace registro_de_trabajador
 
                 // Guardar el documento
                 document.Save();
+                Process.Start(new ProcessStartInfo(filename) { UseShellExecute = true });
             }
         }
 
@@ -386,7 +387,7 @@ namespace registro_de_trabajador
             // Guardar el JSON en un archivo
             File.WriteAllText(filename, json);
 
-            Process.Start(filename);
+            Process.Start(new ProcessStartInfo(filename) { UseShellExecute = true });
             
         }
 
