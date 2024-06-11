@@ -29,13 +29,15 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            label15 = new Label();
+            label12 = new Label();
+            labelEdad = new Label();
+            label5 = new Label();
             Salvardatos = new Button();
             label14 = new Label();
             label13 = new Label();
-            label12 = new Label();
             label11 = new Label();
             label10 = new Label();
-            label5 = new Label();
             label9 = new Label();
             label8 = new Label();
             label7 = new Label();
@@ -44,11 +46,9 @@
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
-            comboBox2 = new ComboBox();
             comboBox1 = new ComboBox();
             button1 = new Button();
             dateTimePicker1 = new DateTimePicker();
-            edadtext = new TextBox();
             phonetext = new TextBox();
             emailtext = new TextBox();
             rfctext = new TextBox();
@@ -58,6 +58,9 @@
             Nombretext = new TextBox();
             panel2 = new Panel();
             Datosdetrabajadores = new DataGridView();
+            panel3 = new Panel();
+            button5 = new Button();
+            borrarbtn = new Button();
             Column1 = new DataGridViewTextBoxColumn();
             Column2 = new DataGridViewTextBoxColumn();
             Column3 = new DataGridViewTextBoxColumn();
@@ -70,9 +73,7 @@
             Column10 = new DataGridViewTextBoxColumn();
             Column11 = new DataGridViewTextBoxColumn();
             Column12 = new DataGridViewTextBoxColumn();
-            panel3 = new Panel();
-            button5 = new Button();
-            borrarbtn = new Button();
+            PayRoll = new DataGridViewTextBoxColumn();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)Datosdetrabajadores).BeginInit();
@@ -82,13 +83,15 @@
             // panel1
             // 
             panel1.BackColor = Color.MediumTurquoise;
+            panel1.Controls.Add(label15);
+            panel1.Controls.Add(label12);
+            panel1.Controls.Add(labelEdad);
+            panel1.Controls.Add(label5);
             panel1.Controls.Add(Salvardatos);
             panel1.Controls.Add(label14);
             panel1.Controls.Add(label13);
-            panel1.Controls.Add(label12);
             panel1.Controls.Add(label11);
             panel1.Controls.Add(label10);
-            panel1.Controls.Add(label5);
             panel1.Controls.Add(label9);
             panel1.Controls.Add(label8);
             panel1.Controls.Add(label7);
@@ -97,11 +100,9 @@
             panel1.Controls.Add(label3);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(label1);
-            panel1.Controls.Add(comboBox2);
             panel1.Controls.Add(comboBox1);
             panel1.Controls.Add(button1);
             panel1.Controls.Add(dateTimePicker1);
-            panel1.Controls.Add(edadtext);
             panel1.Controls.Add(phonetext);
             panel1.Controls.Add(emailtext);
             panel1.Controls.Add(rfctext);
@@ -114,6 +115,44 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(392, 537);
             panel1.TabIndex = 0;
+            // 
+            // label15
+            // 
+            label15.AutoSize = true;
+            label15.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label15.Location = new Point(243, 356);
+            label15.Name = "label15";
+            label15.Size = new Size(29, 15);
+            label15.TabIndex = 32;
+            label15.Text = "ISR:";
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label12.Location = new Point(139, 356);
+            label12.Name = "label12";
+            label12.Size = new Size(48, 15);
+            label12.TabIndex = 31;
+            label12.Text = "Salary:";
+            // 
+            // labelEdad
+            // 
+            labelEdad.AutoSize = true;
+            labelEdad.Location = new Point(58, 268);
+            labelEdad.Name = "labelEdad";
+            labelEdad.Size = new Size(0, 15);
+            labelEdad.TabIndex = 30;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label5.Location = new Point(12, 268);
+            label5.Name = "label5";
+            label5.Size = new Size(31, 15);
+            label5.TabIndex = 29;
+            label5.Text = "Age";
             // 
             // Salvardatos
             // 
@@ -129,32 +168,20 @@
             // label14
             // 
             label14.AutoSize = true;
-            label14.ForeColor = Color.MediumTurquoise;
-            label14.Location = new Point(260, 374);
+            label14.ForeColor = SystemColors.ActiveCaptionText;
+            label14.Location = new Point(278, 356);
             label14.Name = "label14";
-            label14.Size = new Size(44, 15);
+            label14.Size = new Size(0, 15);
             label14.TabIndex = 28;
-            label14.Text = "label14";
             // 
             // label13
             // 
             label13.AutoSize = true;
-            label13.ForeColor = Color.MediumTurquoise;
-            label13.Location = new Point(12, 374);
+            label13.ForeColor = SystemColors.ActiveCaptionText;
+            label13.Location = new Point(193, 356);
             label13.Name = "label13";
-            label13.Size = new Size(44, 15);
+            label13.Size = new Size(0, 15);
             label13.TabIndex = 27;
-            label13.Text = "label13";
-            // 
-            // label12
-            // 
-            label12.AutoSize = true;
-            label12.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label12.Location = new Point(274, 330);
-            label12.Name = "label12";
-            label12.Size = new Size(95, 15);
-            label12.TabIndex = 26;
-            label12.Text = "Hours Worked";
             // 
             // label11
             // 
@@ -175,16 +202,6 @@
             label10.Size = new Size(97, 15);
             label10.TabIndex = 24;
             label10.Text = "Phone Number";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.Location = new Point(71, 257);
-            label5.Name = "label5";
-            label5.Size = new Size(31, 15);
-            label5.TabIndex = 23;
-            label5.Text = "Age";
             // 
             // label9
             // 
@@ -264,16 +281,6 @@
             label1.TabIndex = 14;
             label1.Text = "Name";
             // 
-            // comboBox2
-            // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Items.AddRange(new object[] { "2 hora", "3 hora", "4 hora", "5 hora", "6 hora", "7 hora", "8 hora" });
-            comboBox2.Location = new Point(260, 348);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(121, 23);
-            comboBox2.TabIndex = 11;
-            comboBox2.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
-            // 
             // comboBox1
             // 
             comboBox1.FormattingEnabled = true;
@@ -301,14 +308,6 @@
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(154, 23);
             dateTimePicker1.TabIndex = 8;
-            // 
-            // edadtext
-            // 
-            edadtext.Location = new Point(12, 275);
-            edadtext.Name = "edadtext";
-            edadtext.Size = new Size(154, 23);
-            edadtext.TabIndex = 7;
-            edadtext.KeyPress += edadtext_KeyPress;
             // 
             // phonetext
             // 
@@ -376,12 +375,45 @@
             // 
             Datosdetrabajadores.AllowUserToOrderColumns = true;
             Datosdetrabajadores.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            Datosdetrabajadores.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5, Column6, Column7, Column8, Column9, Column10, Column11, Column12 });
+            Datosdetrabajadores.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5, Column6, Column7, Column8, Column9, Column10, Column11, Column12, PayRoll });
             Datosdetrabajadores.Dock = DockStyle.Fill;
             Datosdetrabajadores.Location = new Point(0, 0);
             Datosdetrabajadores.Name = "Datosdetrabajadores";
             Datosdetrabajadores.Size = new Size(910, 429);
             Datosdetrabajadores.TabIndex = 0;
+            // 
+            // panel3
+            // 
+            panel3.BackColor = Color.Aquamarine;
+            panel3.Controls.Add(button5);
+            panel3.Controls.Add(borrarbtn);
+            panel3.Dock = DockStyle.Bottom;
+            panel3.Location = new Point(392, 429);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(910, 108);
+            panel3.TabIndex = 2;
+            // 
+            // button5
+            // 
+            button5.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button5.Location = new Point(145, 45);
+            button5.Name = "button5";
+            button5.Size = new Size(75, 23);
+            button5.TabIndex = 15;
+            button5.Text = "Export";
+            button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
+            // 
+            // borrarbtn
+            // 
+            borrarbtn.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            borrarbtn.Location = new Point(6, 45);
+            borrarbtn.Name = "borrarbtn";
+            borrarbtn.Size = new Size(103, 23);
+            borrarbtn.TabIndex = 0;
+            borrarbtn.Text = "Delete worker";
+            borrarbtn.UseVisualStyleBackColor = true;
+            borrarbtn.Click += borrarbtn_Click;
             // 
             // Column1
             // 
@@ -435,46 +467,18 @@
             // 
             // Column11
             // 
-            Column11.HeaderText = "Hours Worked";
+            Column11.HeaderText = "Salary";
             Column11.Name = "Column11";
             // 
             // Column12
             // 
-            Column12.HeaderText = "Salary";
+            Column12.HeaderText = "ISR";
             Column12.Name = "Column12";
             // 
-            // panel3
+            // PayRoll
             // 
-            panel3.BackColor = Color.Aquamarine;
-            panel3.Controls.Add(button5);
-            panel3.Controls.Add(borrarbtn);
-            panel3.Dock = DockStyle.Bottom;
-            panel3.Location = new Point(392, 429);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(910, 108);
-            panel3.TabIndex = 2;
-            // 
-            // button5
-            // 
-            button5.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button5.Location = new Point(145, 45);
-            button5.Name = "button5";
-            button5.Size = new Size(75, 23);
-            button5.TabIndex = 15;
-            button5.Text = "Export";
-            button5.UseVisualStyleBackColor = true;
-            button5.Click += button5_Click;
-            // 
-            // borrarbtn
-            // 
-            borrarbtn.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            borrarbtn.Location = new Point(6, 45);
-            borrarbtn.Name = "borrarbtn";
-            borrarbtn.Size = new Size(103, 23);
-            borrarbtn.TabIndex = 0;
-            borrarbtn.Text = "Delete worker";
-            borrarbtn.UseVisualStyleBackColor = true;
-            borrarbtn.Click += borrarbtn_Click;
+            PayRoll.HeaderText = "PayRoll";
+            PayRoll.Name = "PayRoll";
             // 
             // Registro
             // 
@@ -502,11 +506,9 @@
         private TextBox apellidomtext;
         private TextBox apellidotext;
         private TextBox Nombretext;
-        private ComboBox comboBox2;
         private ComboBox comboBox1;
         private Button button1;
         private DateTimePicker dateTimePicker1;
-        private TextBox edadtext;
         private TextBox phonetext;
         private TextBox emailtext;
         private TextBox rfctext;
@@ -515,17 +517,23 @@
         private Label label3;
         private Label label2;
         private Label label1;
-        private Label label5;
         private Label label9;
         private Label label8;
         private Label label7;
         private Label label10;
-        private Label label12;
         private Label label11;
         private Panel panel2;
         private DataGridView Datosdetrabajadores;
         private Panel panel3;
         private Button borrarbtn;
+        private Label label14;
+        private Label label13;
+        private Button Salvardatos;
+        private Button button5;
+        private Label label5;
+        private Label labelEdad;
+        private Label label12;
+        private Label label15;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Column2;
         private DataGridViewTextBoxColumn Column3;
@@ -538,9 +546,6 @@
         private DataGridViewTextBoxColumn Column10;
         private DataGridViewTextBoxColumn Column11;
         private DataGridViewTextBoxColumn Column12;
-        private Label label14;
-        private Label label13;
-        private Button Salvardatos;
-        private Button button5;
+        private DataGridViewTextBoxColumn PayRoll;
     }
 }
